@@ -8,7 +8,7 @@ export default defineConfig({
   //     external: ['react-is']
   //   }
   // },
-  
+   base: '/', 
   plugins: [
     tailwindcss(),
     react()
