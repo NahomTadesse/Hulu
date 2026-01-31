@@ -3,8 +3,10 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
 
-    optimizeDeps: {
-    include: ['react-is']
+    build: {
+    rollupOptions: {
+      external: ['react-is']
+    }
   },
   
   plugins: [
@@ -12,6 +14,10 @@ export default defineConfig({
     react()
   ],
 })
+
+
+
+
 
 // import { defineConfig } from 'vite'
 // import react from '@vitejs/plugin-react'
