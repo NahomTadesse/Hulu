@@ -1,0 +1,295 @@
+/*@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800&display=swap");*/
+/** {*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*    box-sizing: border-box;*/
+/*    font-family: "Montserrat", sans-serif;*/
+/*}*/
+
+/*:root {*/
+/*    --primaryColor: hsl(94, 55%, 56%);*/
+/*    --hoverColor: hsl(93, 75%, 76%);*/
+/*    --paleGreen: hsl(96, 75%, 89%);*/
+/*    --whiteColor: hsl(0, 0%, 100%);*/
+/*    --blackColor: hsl(0, 0%, 18%);*/
+/*    --greyText: hsl(0, 0%, 75%);*/
+/*    --bgColor: hsl(113, 11%, 85%);*/
+/*    --inputColor: hsl(330, 12%, 97%);*/
+/*    !* Font ang Typography *!*/
+/*    --biggestFontSize: 2.5rem;*/
+/*    --h1FontSize: 1.5rem;*/
+/*    --h2FontSize: 1.25rem;*/
+/*    --h3FontSize: 1rem;*/
+/*    --normalFontSize: .938rem;*/
+/*    --smallFontSize: .813rem;*/
+/*    --smallestFontSize: .75rem;*/
+/*}*/
+
+/*!* Global flex utility class for elements like .loginPage, .container, .formDiv, .footerDiv *!*/
+/*.flex {*/
+/*    display: flex;*/
+/*    align-items: center; !* Ensures items are centered vertically by default *!*/
+/*}*/
+
+/*!* Global grid utility class for elements like .form *!*/
+/*.grid {*/
+/*    display: grid;*/
+/*}*/
+
+/*.loginPage,*/
+/*.registerPage {*/
+/*    height: 100vh;*/
+/*    width: 100%;*/
+/*    margin: auto;*/
+/*    border-radius: 10px;*/
+/*    overflow: hidden;*/
+/*    box-shadow: 0 7px 50px rgb(214, 223, 213);*/
+/*    !* Added to ensure loginPage fills the viewport and centers content *!*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+/*.loginPage .container,*/
+/*.registerPage .container {*/
+/*    height: 75vh;*/
+/*    width: 60%;*/
+/*    margin: auto;*/
+/*    !* Changed display: flex *!*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    border-radius: 10px;*/
+/*    background: hsl(0, 0%, 91%);*/
+/*    overflow: hidden; !* Added to keep children contained within border-radius *!*/
+/*}*/
+/*.loginPage .container .videoDiv,*/
+/*.registerPage .container .videoDiv {*/
+/*    position: relative;*/
+/*    display: flex;*/
+/*    flex-basis: 50%;*/
+/*    width: 50%; !* Changed from 70% to 50% for equal split with formDiv *!*/
+/*    height: 100%;*/
+/*    padding: 0 1.5rem;*/
+/*    text-align: center;*/
+/*    justify-content: center;*/
+/*    align-items: center; !* Added to center textDiv content *!*/
+/*    flex-direction: column;*/
+/*    margin: auto;*/
+/*    border-radius: 10px;*/
+/*    overflow: hidden;*/
+/*}*/
+/*.loginPage .container .videoDiv video,*/
+/*.loginPage .container .videoDiv .footerDiv,*/
+/*.registerPage .container .videoDiv video,*/
+/*.registerPage .container .videoDiv .footerDiv {*/
+/*    position: absolute;*/
+/*}*/
+/*.loginPage .container .videoDiv video,*/
+/*.registerPage .container .videoDiv video {*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+/*    object-fit: cover;*/
+/*    top: 0;*/
+/*    bottom: 0;*/
+/*    right: 0;*/
+/*    left: 0;*/
+/*}*/
+/*.loginPage .container .videoDiv .textDiv,*/
+/*.registerPage .container .videoDiv .textDiv {*/
+/*    position: relative;*/
+/*    z-index: 10; !* Ensures text is above video *!*/
+/*}*/
+/*.loginPage .container .videoDiv .textDiv .title,*/
+/*.registerPage .container .videoDiv .textDiv .title {*/
+/*    color: var(--whiteColor);*/
+/*    font-size: 35px;*/
+/*    font-weight: 800;*/
+/*}*/
+/*.loginPage .container .videoDiv .textDiv p,*/
+/*.registerPage .container .videoDiv .textDiv p {*/
+/*    color: var(--whiteColor);*/
+/*    padding: 1rem;*/
+/*    font-weight: 400;*/
+/*}*/
+/*.loginPage .container .videoDiv .footerDiv,*/
+/*.registerPage .container .videoDiv .footerDiv {*/
+/*    bottom: 10px;*/
+/*    padding: 0 1rem;*/
+/*    height: 60px;*/
+/*    background: rgba(255, 255, 255, 0.248);*/
+/*    left: 10px;*/
+/*    right: 10px;*/
+/*    justify-content: space-between;*/
+/*    align-items: center; !* Added to center text and button *!*/
+/*    backdrop-filter: blur(1px);*/
+/*    border-radius: 10px;*/
+/*    z-index: 10; !* Ensures footer is above video *!*/
+/*    display: flex; !* Added display flex for centering *!*/
+/*}*/
+/*.loginPage .container .videoDiv .footerDiv .text,*/
+/*.registerPage .container .videoDiv .footerDiv .text {*/
+/*    color: var(--whiteColor);*/
+/*}*/
+/*.loginPage .container .videoDiv .footerDiv .btn,*/
+/*.registerPage .container .videoDiv .footerDiv .btn {*/
+/*    background: var(--whiteColor);*/
+/*    color: var(--primaryColor);*/
+/*    padding: 0.8rem 1.5rem;*/
+/*    border-radius: 10px;*/
+/*    font-weight: 600; !* Increased font weight *!*/
+/*    transition: 0.3s ease;*/
+/*    border: none; !* Added to ensure button has no default border *!*/
+/*    cursor: pointer;*/
+/*}*/
+/*.loginPage .container .videoDiv .footerDiv .btn:hover,*/
+/*.registerPage .container .videoDiv .footerDiv .btn:hover {*/
+/*    background: var(--hoverColor);*/
+/*    color: var(--blackColor);*/
+/*}*/
+/*.loginPage .container .formDiv,*/
+/*.registerPage .container .formDiv {*/
+/*    flex-basis: 50%;*/
+/*    !* Removed margin: auto and transform: translateY(-1rem) *!*/
+/*    display: flex; !* Ensure it's a flex container *!*/
+/*    justify-content: center; !* Center content horizontally *!*/
+/*    align-items: center; !* Center content vertically *!*/
+/*    height: 100%; !* Ensure it takes full height *!*/
+/*}*/
+
+/*!* Updated formDiv content to be column-based and centered *!*/
+/*.loginPage .container .formDiv > *,*/
+/*.registerPage .container .formDiv > * {*/
+/*    max-width: 80%; !* Limit width of form content *!*/
+
+/*    width: 100%;*/
+/*}*/
+
+
+/*.loginPage .container .formDiv .headerDiv,*/
+/*.registerPage .container .formDiv .headerDiv {*/
+/*    text-align: center;*/
+/*    padding: 0 0 1.5rem 0; !* Reduced top padding *!*/
+/*}*/
+/*.loginPage .container .formDiv .headerDiv img,*/
+/*.registerPage .container .formDiv .headerDiv img {*/
+/*    width: 60px;*/
+/*    padding-bottom: 0.5rem;*/
+/*}*/
+/*.loginPage .container .formDiv .headerDiv h3,*/
+/*.registerPage .container .formDiv .headerDiv h3 {*/
+/*    font-size: 25px;*/
+/*    color: var(--blackColor);*/
+/*    font-weight: 600;*/
+/*}*/
+/*.loginPage .container .formDiv .form,*/
+/*.registerPage .container .formDiv .form {*/
+/*    !* The form is already a grid from LoginPage.tsx, fixed the gap and padding *!*/
+/*    gap: 1.5rem; !* Increased gap for better spacing *!*/
+/*    padding: 2rem;*/
+/*    max-width: 350px; !* Added max-width for better form appearance *!*/
+/*    margin: 0 auto;*/
+/*}*/
+
+/*!* Styling the h2 inside the form *!*/
+/*.loginPage .container .formDiv .form h2,*/
+/*.registerPage .container .formDiv .form h2 {*/
+/*    text-align: center;*/
+/*    color: var(--blackColor);*/
+/*    font-size: var(--h1FontSize);*/
+/*}*/
+
+/*!* Styling the error message *!*/
+/*.loginPage .container .formDiv .form p,*/
+/*.registerPage .container .formDiv .form p {*/
+/*    text-align: center;*/
+/*    color: red;*/
+/*    font-size: var(--normalFontSize);*/
+/*}*/
+
+/*!* FIX: Targeting the unclassed input fields directly *!*/
+/*.loginPage .container .formDiv .form input,*/
+/*.registerPage .container .formDiv .form input {*/
+/*    width: 100%;*/
+/*    padding: 1rem;*/
+/*    background: var(--inputColor);*/
+/*    border: none;*/
+/*    outline: none;*/
+/*    border-radius: 10px;*/
+/*    font-size: var(--normalFontSize);*/
+/*    color: var(--blackColor);*/
+/*    !* Added box-shadow for a subtle input depth *!*/
+/*    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);*/
+/*}*/
+
+/*!* FIX: Targeting the unclassed button directly and applying btn styles *!*/
+/*.loginPage .container .formDiv .form button[type="submit"],*/
+/*.registerPage .container .formDiv .form button[type="submit"] {*/
+/*    padding: 0.8rem;*/
+/*    background: var(--primaryColor);*/
+/*    border: none;*/
+/*    border-radius: 10px;*/
+/*    color: var(--whiteColor);*/
+/*    font-size: 16px;*/
+/*    width: 100%;*/
+/*    cursor: pointer;*/
+/*    transition: 0.3s ease;*/
+/*    font-weight: 600;*/
+/*}*/
+
+/*.loginPage .container .formDiv .form button[type="submit"]:hover,*/
+/*.registerPage .container .formDiv .form button[type="submit"]:hover {*/
+/*    background: var(--hoverColor);*/
+/*    color: var(--blackColor);*/
+/*}*/
+
+/*!* REMOVED: .inputDiv and its children styles as they are not used in LoginPage.tsx *!*/
+
+/*!* The rest of the original CSS is kept for potential future use or register page *!*/
+/*.loginPage .container .formDiv .form .forgotPassword,*/
+/*.registerPage .container .formDiv .form .forgotPassword {*/
+/*    font-size: 13px;*/
+/*    color: var(--blackColor);*/
+/*    opacity: 0.7;*/
+/*    text-align: center;*/
+/*}*/
+/*.loginPage .container .formDiv .form .forgotPassword a,*/
+/*.registerPage .container .formDiv .form .forgotPassword a {*/
+/*    text-decoration: underline;*/
+/*    cursor: pointer;*/
+/*    opacity: 1;*/
+/*}*/
+
+/*!* MEDIA QUERIES for responsiveness (optional, but good practice) *!*/
+/*@media screen and (max-width: 990px) {*/
+/*    .loginPage .container,*/
+/*    .registerPage .container {*/
+/*        width: 80%;*/
+/*    }*/
+/*}*/
+
+/*@media screen and (max-width: 768px) {*/
+/*    .loginPage .container,*/
+/*    .registerPage .container {*/
+/*        width: 95%;*/
+/*        flex-direction: column; !* Stack vertically *!*/
+/*        height: auto;*/
+/*        padding: 2rem 0;*/
+/*    }*/
+/*    .loginPage .container .videoDiv,*/
+/*    .registerPage .container .videoDiv {*/
+/*        display: none; !* Hide video section on smaller screens *!*/
+/*    }*/
+/*    .loginPage .container .formDiv,*/
+/*    .registerPage .container .formDiv {*/
+/*        flex-basis: 100%;*/
+/*    }*/
+/*}*/
+
+/*.loginPage .container .formDiv, .registerPage .container .formDiv {*/
+/*    flex-basis: 50%;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    height: 100%;*/
+/*    flex-direction: column;*/
+/*}*/
+
