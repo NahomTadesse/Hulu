@@ -3,11 +3,11 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
 
-    build: {
-    rollupOptions: {
-      external: ['react-is']
-    }
-  },
+  //   build: {
+  //   rollupOptions: {
+  //     external: ['react-is']
+  //   }
+  // },
   
   plugins: [
     tailwindcss(),
